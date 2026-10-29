@@ -1,0 +1,66 @@
+{
+  "origin": {
+    "name": "Adana \u00b7 Turkey",
+    "code": "TUR",
+    "lon": 35.3213,
+    "lat": 36.9914
+  },
+  "destinations": [
+    {
+      "name": "Jordan",
+      "code": "JOR",
+      "city": "Amman",
+      "lon": 35.9284,
+      "lat": 31.9454,
+      "color": "#64d9b7"
+    },
+    {
+      "name": "Syria",
+      "code": "SYR",
+      "city": "Damascus",
+      "lon": 36.2765,
+      "lat": 33.5138,
+      "color": "#f2bf6e"
+    },
+    {
+      "name": "Iraq",
+      "code": "IRQ",
+      "city": "Baghdad",
+      "lon": 44.3661,
+      "lat": 33.3152,
+      "color": "#a5a0f2"
+    },
+    {
+      "name": "Dubai (UAE)",
+      "code": "ARE",
+      "city": "Dubai",
+      "lon": 55.2708,
+      "lat": 25.2048,
+      "color": "#70c9f2"
+    },
+    {
+      "name": "Libya",
+      "code": "LBY",
+      "city": "Tripoli airport",
+      "lon": 13.159,
+      "lat": 32.6635,
+      "color": "#ee9d92"
+    },
+    {
+      "name": "Mauritania",
+      "code": "MRT",
+      "city": "Nouakchott",
+      "lon": -15.9582,
+      "lat": 18.0735,
+      "color": "#c8d77c"
+    },
+    {
+      "name": "Kenya",
+      "code": "KEN",
+      "city": "Nairobi",
+      "lon": 36.8219,
+      "lat": -1.2921,
+      "color": "#e1a2d8"
+    }
+  ]
+}

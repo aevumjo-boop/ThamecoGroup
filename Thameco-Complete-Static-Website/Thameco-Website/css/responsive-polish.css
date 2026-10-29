@@ -1,0 +1,41 @@
+html,body,#root{min-width:0;max-width:100%}img{max-width:100%}.container-x{min-width:0}.grid>*{min-width:0}main h1,main h2,main h3{overflow-wrap:break-word}a[href^="mailto:"],a[href^="tel:"]{overflow-wrap:anywhere;min-width:0}
+.site-footer{position:relative}.site-footer-bottom{min-height:112px;box-sizing:border-box}.site-footer .aevum-credit{flex:none}.site-footer .aevum-credit-link{position:relative;z-index:8}
+.aevum-mascot-scene{position:absolute;inset:0;z-index:6;pointer-events:none;opacity:0;overflow:hidden;--mascot-height:108px;transition:opacity .25s}
+.aevum-mascot-actor{position:absolute;left:0;top:0;width:calc(var(--mascot-height)*1.65);height:var(--mascot-height);transform-origin:20% 70%;opacity:0;will-change:transform}
+.aevum-doctor{position:absolute;left:0;top:0;height:var(--mascot-height);width:auto;max-width:none;object-fit:contain;z-index:2;transform-origin:50% 85%}
+.aevum-mascot-shadow{position:absolute;left:calc(var(--mascot-height)*.14);bottom:-3px;width:calc(var(--mascot-height)*.42);height:5px;background:#0008;filter:blur(3px);border-radius:50%;z-index:1}
+.aevum-medicine{position:absolute;left:0;top:0;display:block;width:calc(var(--mascot-height)*.115);height:calc(var(--mascot-height)*.14);border-radius:1px;background:linear-gradient(115deg,#fffdf0 0%,#f6f2df 72%,#c5c8bd 73%);box-shadow:1px 2px 2px #0005;border:1px solid #d5dacb;z-index:3;box-sizing:border-box;transform-origin:center}
+.aevum-medicine:before{content:'';position:absolute;left:0;top:15%;width:73%;height:23%;background:var(--medicine-color,#ff742e)}.aevum-medicine:after{content:'+';position:absolute;left:1px;bottom:0;font:700 8px/1 Arial;color:var(--medicine-color,#ff742e)}.aevum-medicine b{position:absolute;bottom:21%;left:2px;width:46%;height:1px;background:#4c696777}.medicine-1{--medicine-color:#57aaa1}.medicine-2{--medicine-color:#ecb756}
+.site-mobile-actions{flex:none}.site-desktop-nav{white-space:nowrap}.site-header-bar>a{min-width:0}
+@media(max-width:1100px) and (min-width:1024px){.site-desktop-nav{gap:20px!important}.site-desktop-actions{gap:12px!important}.site-header-bar{gap:12px!important}.site-header-bar>.site-desktop-nav a{font-size:11px}}
+@media(max-width:1023px){.site-desktop-nav,.site-desktop-actions,.site-utility-bar{display:none!important}.site-mobile-actions{display:flex!important}.site-mobile-dialog{display:flex!important;max-height:100dvh;height:100dvh}.site-header-bar{height:72px!important;gap:12px!important}.site-mobile-dialog>div:last-child{min-height:0;overscroll-behavior:contain}.site-header-bar [role="group"]{gap:5px}.site-footer-bottom{min-height:104px}}
+@media(min-width:1024px){.site-mobile-actions,.site-mobile-dialog{display:none!important}}
+@media(max-width:480px){
+ .site-header-bar{padding-inline:16px!important;gap:8px!important;height:68px!important}
+ .site-header-bar>a{gap:6px!important;flex:none}
+ .site-header-bar>a img{width:30px!important;height:30px!important}
+ .site-header-bar>a>span>span:first-child{font-size:13px!important;letter-spacing:.04em!important}
+ .site-header-bar>a>span>span:last-child{font-size:9px!important;letter-spacing:.25em!important}
+ .site-mobile-actions{gap:6px!important}.site-mobile-actions>div{padding:3px!important}
+ .site-mobile-actions [role="group"]{gap:2px!important}.site-mobile-actions [role="group"]>svg,.site-mobile-actions [role="group"]>span{display:none!important}
+ .site-mobile-actions [role="group"] button{font-size:9px!important;letter-spacing:.05em!important;padding:5px 3px!important;min-width:22px}
+ .site-mobile-actions>button{height:32px!important;width:32px!important;flex:none}
+ .aevum-mascot-scene{--mascot-height:84px}.site-footer .aevum-credit{gap:6px}.site-footer-bottom{min-height:104px}
+ .site-footer a[href^="tel:"],.site-footer a[href^="mailto:"]{font-size:12px;line-height:1.6}
+}
+@media(max-height:570px) and (orientation:landscape){.site-header-bar{height:64px!important}.aevum-mascot-scene{--mascot-height:82px}.site-mobile-dialog>div:first-child{height:60px;flex:none}.site-mobile-dialog nav a{padding-block:9px!important}.site-mobile-dialog nav a>span:first-child{font-size:24px!important}}
+@media(prefers-reduced-motion:reduce){.aevum-mascot-scene{transition:none}.aevum-mascot-actor{will-change:auto}}
+/* Creator credit and its walking doctor share a compact footer baseline. */
+.site-footer-bottom{position:relative;min-height:116px;display:flex;justify-content:center!important}
+.site-footer-bottom>span:first-of-type{position:absolute;left:4.6vw;top:50%;transform:translateY(-50%)}
+.site-footer-bottom>span:last-of-type{position:absolute;right:4.6vw;bottom:14px}
+.aevum-footer-brand{direction:ltr;padding-right:88px;display:flex;align-items:center;min-height:84px}
+.aevum-footer-brand .aevum-credit{display:flex;align-items:center;gap:9px;color:#bacdc6;font-size:11px}
+.aevum-mascot-scene{--mascot-height:98px}
+.aevum-mascot-actor{width:calc(var(--mascot-height)*.667);transform-origin:50% 100%}
+.aevum-walker{position:absolute;inset:0;transform-origin:50% 80%}
+.aevum-doctor{width:100%;height:100%;transform-origin:50% 79%}
+.aevum-doctor-body{clip-path:inset(0 0 21% 0)}
+.aevum-doctor-leg-left{clip-path:polygon(0 79%,51% 79%,51% 100%,0 100%);transform-origin:41% 79%}
+.aevum-doctor-leg-right{clip-path:polygon(51% 79%,100% 79%,100% 100%,51% 100%);transform-origin:63% 79%}
+@media(max-width:480px){.site-footer-bottom{min-height:108px}.site-footer-bottom>span:first-of-type{display:none}.aevum-footer-brand{padding-right:66px}.aevum-footer-brand .aevum-credit{font-size:10px;gap:7px}.aevum-footer-brand .aevum-credit img{width:112px;height:28px}.aevum-mascot-scene{--mascot-height:84px}.site-footer-bottom>span:last-of-type{font-size:6px;right:15px;bottom:7px}}

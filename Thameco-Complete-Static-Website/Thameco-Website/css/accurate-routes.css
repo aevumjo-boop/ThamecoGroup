@@ -1,0 +1,108 @@
+.accurate-route-map{position:relative;direction:ltr;min-width:0}.shipping-route-svg{display:block;width:100%;height:auto;overflow:hidden;max-height:78svh}.route-graticule{fill:none;stroke:#89b6b0;stroke-opacity:.11;stroke-width:.7}.route-country{fill:#123639;stroke:#527c78;stroke-opacity:.6;stroke-width:.9;stroke-linejoin:round}.route-origin-country{fill:#a38958;stroke:#e7cc9b}.route-country.has-arrived{fill:var(--destination-color);fill-opacity:.52;stroke:var(--destination-color);stroke-opacity:1;stroke-width:1.4}.route-connection{stroke-width:2.1;stroke-linecap:round;opacity:0;filter:drop-shadow(0 0 4px #7ac1bd44)}.route-traveler{opacity:0;filter:drop-shadow(0 0 5px #fff7)}.route-destination{opacity:0}.route-destination.has-arrived{opacity:1}.route-marker-ring{fill:#041216;stroke:var(--destination-color);stroke-width:1.6}.route-marker-core{fill:var(--destination-color)}.route-label-line{fill:none;stroke:#c7e0d9;stroke-opacity:.55;stroke-width:.8}.route-label{font:500 15px 'Manrope',sans-serif;fill:#f1f4e9;paint-order:stroke;stroke:#041216;stroke-width:4px;stroke-linejoin:round}.route-hub-label{font:600 13px 'Manrope',sans-serif;letter-spacing:1.5px;fill:#f2d399;paint-order:stroke;stroke:#041216;stroke-width:4px}.route-hub-ring{fill:#d6b57222;stroke:#e9c47f;stroke-width:1.2}.route-hub-dot{fill:#f8d995;stroke:#041216;stroke-width:1.5}.route-map-legend{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px;margin-top:4px;border-top:1px solid #b4d8cf22}.route-map-legend button{display:flex;align-items:center;gap:9px;padding:11px 0;text-align:left;cursor:pointer;border-bottom:1px solid #b4d8cf19;font:11px 'Manrope',sans-serif;color:#8ba6a3;background:transparent}.route-map-legend button i{width:5px;height:5px;border-radius:50%;flex:none;opacity:.5}.route-map-legend button small{margin-left:auto;font-size:8px;opacity:.45}.route-map-legend button.has-arrived{color:#edf1e9}.route-map-legend button.has-arrived i{opacity:1;box-shadow:0 0 8px currentColor}.route-map-legend button:focus-visible{outline:1px solid #55c9bd;outline-offset:3px}.route-geography-note{margin-top:15px;font:8px/1.7 'Manrope',sans-serif;letter-spacing:.13em;color:#8ba6a3}@media(max-width:640px){.route-label{font-size:17px}.route-map-legend{gap:0 13px}.route-map-legend button{font-size:10px}.route-geography-note{font-size:7px}}
+
+/* Soft luminous arcs and light packets, revealed by scroll before they begin flowing. */
+.route-light-halo{stroke-width:10;stroke-linecap:round;filter:blur(5px);opacity:0}
+.route-connection{stroke-width:1.65;filter:drop-shadow(0 0 4px #9cfff399)}
+.route-flow-trail{stroke-width:3;stroke-linecap:round;filter:drop-shadow(0 0 5px #a4fff0);opacity:0;pointer-events:none}
+.route-flow-packet{filter:drop-shadow(0 0 4px #d1fff3) drop-shadow(0 0 9px #73e5d4);opacity:0;pointer-events:none}
+.route-traveler{fill:#edfff9;filter:drop-shadow(0 0 5px #b6ffec) drop-shadow(0 0 10px #55c9bd)}
+.route-marker-aura{fill:none;stroke:var(--destination-color);stroke-width:1;opacity:.3;transform-box:fill-box;transform-origin:center;animation:route-marker-breathe 3.6s ease-out infinite}
+.route-hub-aura{fill:#55c9bd20;stroke:#7de5d933;stroke-width:1;filter:drop-shadow(0 0 9px #55c9bd77);transform-box:fill-box;transform-origin:center;animation:route-hub-breathe 4s ease-in-out infinite}
+.route-hub-dot{fill:#9cefe1;stroke:#041216}.route-hub-ring{stroke:#65d8c8;fill:#55c9bd35}
+@keyframes route-marker-breathe{0%,100%{transform:scale(.8);opacity:.15}50%{transform:scale(1.2);opacity:.45}}
+@keyframes route-hub-breathe{0%,100%{transform:scale(.85);opacity:.6}50%{transform:scale(1.15);opacity:1}}
+@media(prefers-reduced-motion:reduce){.route-marker-aura,.route-hub-aura{animation:none}.route-flow-packet,.route-flow-trail{display:none}}
+
+/* One coverage scene: the copy and map share the same pinned viewport. */
+.coverage-scroll-section{position:relative;height:290svh;background:radial-gradient(ellipse at 78% 40%,#0e3436,transparent 65%),#041216;overflow:clip;border-block:1px solid #b4d8cf1c}
+.coverage-pin{position:sticky;top:0;height:100svh;box-sizing:border-box;padding:104px max(28px,4.6vw) 24px}
+.coverage-layout{display:grid;grid-template-columns:minmax(0,.83fr) minmax(0,1.17fr);gap:48px;align-items:center;height:100%;max-width:1440px;margin:auto}
+.coverage-copy{min-width:0;display:flex;flex-direction:column;gap:15px}
+.coverage-eyebrow{font:600 9px/1.5 'Manrope',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#6dd2c4}
+.coverage-title{font:400 clamp(30px,3vw,45px)/1.05 'Instrument Serif',serif;letter-spacing:-.025em;color:#edf1e9;max-width:19ch;text-wrap:balance}
+.coverage-body{font:400 13px/1.6 'Manrope',sans-serif;color:#acc0bb;max-width:48ch}
+.coverage-destination{padding:17px 0;border-block:1px solid #a6d0c126}
+.coverage-step-line{display:flex;justify-content:space-between;align-items:center;gap:12px;color:#80b7ae;font:500 8px/1.4 'Manrope',sans-serif;letter-spacing:.13em}
+.coverage-current-name{font:400 clamp(29px,3.4vw,49px)/1.15 'Instrument Serif',serif;color:#f1f5e9;margin-top:8px;text-wrap:balance}
+.coverage-status{font:400 10px/1.5 'Manrope',sans-serif;color:#9eb9b2;margin-top:5px}
+.coverage-list-label{display:flex;justify-content:space-between;gap:10px;font:500 8px/1.5 'Manrope',sans-serif;letter-spacing:.1em;color:#8eb0a7;margin-bottom:7px}
+.coverage-route-controls .route-map-legend{grid-template-columns:repeat(2,minmax(0,1fr));margin:0;border:0;gap:0 18px}
+.coverage-route-controls .route-map-legend button{padding:7px 0;min-height:29px;font-size:11px;gap:8px}
+.coverage-route-controls .route-map-legend button.is-current{color:#f1f5e9}
+.coverage-route-controls .route-map-legend button.is-current small{color:#6edbc7;opacity:1}
+.coverage-stats-label{font:400 11px/1.4 'Instrument Serif',serif;color:#adc2b8;margin-bottom:6px}
+.coverage-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.coverage-stats dd{font:400 26px/1 'Instrument Serif',serif;color:#d9eadf}
+.coverage-stats dt{font:400 8px/1.4 'Manrope',sans-serif;color:#86a99f;margin-top:5px;overflow-wrap:anywhere}
+.coverage-kicker{font:italic 400 12px/1.45 'Instrument Serif',serif;color:#7e9c92}
+.coverage-map-shell{display:flex;flex-direction:column;min-height:0;height:100%;max-height:760px;min-width:0;padding:18px;border:1px solid #94bdb524;background:linear-gradient(140deg,#0b303033,#04121677);border-radius:3px;box-sizing:border-box}
+.coverage-map-topline{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px 12px;padding-bottom:12px;border-bottom:1px solid #b4d8cf1b;font:400 8px/1.4 'Manrope',sans-serif;letter-spacing:.1em;color:#90b2a8}
+.coverage-map-shell .accurate-route-map{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.coverage-map-shell .shipping-route-svg{width:100%;height:100%;max-height:none;min-height:0;aspect-ratio:auto;overflow:hidden}
+.coverage-map-shell .route-label{font-size:18px}
+.coverage-map-caption{padding-top:10px;border-top:1px solid #b4d8cf1b;font:400 8px/1.5 'Manrope',sans-serif;letter-spacing:.14em;color:#6f9a8e}
+.route-marker-aura,.route-hub-aura{animation:none!important}
+html[dir=rtl] .coverage-title,html[dir=rtl] .coverage-current-name,html[dir=rtl] .coverage-stats dd,html[dir=rtl] .coverage-kicker,html[dir=rtl] .coverage-stats-label{font-family:'Tajawal',sans-serif;line-height:1.2}
+html[dir=rtl] .coverage-body,html[dir=rtl] .coverage-status,html[dir=rtl] .coverage-eyebrow,html[dir=rtl] .coverage-list-label,html[dir=rtl] .coverage-step-line,html[dir=rtl] .coverage-stats dt{font-family:'Tajawal',sans-serif;letter-spacing:normal}
+html[dir=rtl] .coverage-route-controls .route-map-legend{direction:rtl}
+html[dir=rtl] .coverage-route-controls .route-map-legend button{text-align:right;font-family:'Tajawal',sans-serif}
+html[dir=rtl] .coverage-route-controls .route-map-legend button small{margin-left:0;margin-inline-start:auto}
+@media(min-width:768px) and (max-height:780px){.coverage-pin{padding-top:90px;padding-bottom:16px}.coverage-copy{gap:9px}.coverage-title{font-size:30px}.coverage-body{font-size:11px}.coverage-destination{padding:10px 0}.coverage-current-name{font-size:32px;margin-top:5px}.coverage-route-controls .route-map-legend button{min-height:25px;padding:5px 0;font-size:10px}.coverage-stats dd{font-size:22px}.coverage-kicker{font-size:10px}}
+@media(min-width:768px) and (max-width:1023px){.coverage-layout{gap:24px;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)}.coverage-pin{padding-inline:24px}.coverage-title{font-size:34px}.coverage-body{font-size:12px}}
+@media(max-width:767px){
+ .coverage-scroll-section{height:300svh}
+ .coverage-pin{padding:82px 20px 16px}
+ .coverage-layout{display:flex;flex-direction:column;align-items:stretch;gap:12px}
+ .coverage-copy{gap:8px;flex:none}
+ .coverage-eyebrow{font-size:8px;letter-spacing:.15em}
+ .coverage-title{font-size:clamp(23px,6vw,30px);line-height:1.05;max-width:none;text-wrap:balance}
+ .coverage-body{font-size:11px;line-height:1.4;max-width:none}
+ .coverage-destination{padding:8px 0}
+ .coverage-step-line{font-size:7px;letter-spacing:.07em}
+ .coverage-current-name{font-size:28px;line-height:1.05;margin-top:5px}
+ .coverage-status{font-size:9px;line-height:1.3;margin-top:3px}
+ .coverage-list-label{font-size:7px;margin-bottom:4px}
+ .coverage-route-controls .route-map-legend{grid-template-columns:repeat(4,minmax(0,1fr));gap:0 8px}
+ .coverage-route-controls .route-map-legend button{min-height:25px;font-size:9px;padding:5px 0;gap:4px;line-height:1.2}
+ .coverage-route-controls .route-map-legend button small{display:none}
+ .coverage-route-controls .route-map-legend button i{width:4px;height:4px}
+ .coverage-stats-label{font-size:10px;margin-bottom:4px}
+ .coverage-stats{gap:7px}.coverage-stats dd{font-size:20px}.coverage-stats dt{font-size:7px;margin-top:2px}
+ .coverage-kicker{font-size:10px;line-height:1.2}
+ .coverage-map-shell{flex:1;min-height:130px;max-height:none;padding:10px;height:auto}
+ .coverage-map-topline{font-size:7px;letter-spacing:.04em;padding-bottom:6px}
+ .coverage-map-shell .route-label{font-size:25px;stroke-width:5px}
+ .coverage-map-shell .route-hub-label{font-size:19px;letter-spacing:0}
+ .coverage-map-caption{font-size:6px;padding-top:5px}
+}
+@media(max-width:767px) and (max-height:720px){.coverage-pin{padding:76px 15px 10px}.coverage-layout{gap:8px}.coverage-copy{gap:5px}.coverage-eyebrow{font-size:7px}.coverage-title{font-size:20px;line-height:1.03}.coverage-body{font-size:10px;line-height:1.25}.coverage-destination{padding:6px 0}.coverage-current-name{font-size:23px;margin-top:3px}.coverage-status{font-size:8px}.coverage-step-line{font-size:6px}.coverage-route-controls .route-map-legend button{min-height:21px;font-size:8px;padding:4px 0}.coverage-list-label{font-size:6px;margin-bottom:2px}.coverage-stats dd{font-size:17px}.coverage-stats dt{font-size:6px}.coverage-stats-label{font-size:9px;margin-bottom:2px}.coverage-kicker{font-size:9px;line-height:1.1}.coverage-map-shell{padding:7px;min-height:110px}.coverage-map-shell .route-label{display:none}.coverage-map-topline{font-size:6px;padding-bottom:3px}.coverage-map-caption{padding-top:3px;font-size:6px}}
+@media(max-height:570px) and (orientation:landscape){.coverage-pin{padding:80px 24px 10px}.coverage-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:18px}.coverage-copy{gap:4px}.coverage-title{font-size:21px;line-height:1}.coverage-eyebrow{font-size:6px}.coverage-body{font-size:9px;line-height:1.2}.coverage-destination{padding:4px 0}.coverage-step-line{font-size:6px}.coverage-current-name{font-size:23px;margin-top:2px}.coverage-status{font-size:7px}.coverage-route-controls .route-map-legend{grid-template-columns:repeat(4,minmax(0,1fr));gap:0 7px}.coverage-route-controls .route-map-legend button{min-height:19px;font-size:8px;padding:3px 0;gap:3px}.coverage-route-controls .route-map-legend button small{display:none}.coverage-list-label{font-size:6px;margin-bottom:2px}.coverage-stats dd{font-size:17px}.coverage-stats dt{font-size:6px;margin-top:1px}.coverage-stats-label{font-size:8px;margin-bottom:2px}.coverage-kicker{font-size:8px;line-height:1.1}.coverage-map-shell{padding:8px;min-height:0}.coverage-map-topline{font-size:6px;padding-bottom:5px}.coverage-map-shell .route-label{font-size:24px}.coverage-map-caption{font-size:6px;padding-top:4px}}
+/* Use the map's natural proportions on wider screens and stack it on portrait tablets. */
+.coverage-map-shell{height:auto;aspect-ratio:900/850;max-height:100%}
+@media(max-width:767px){.coverage-map-shell{aspect-ratio:auto}}
+@media(min-width:768px) and (max-width:1023px) and (orientation:portrait){
+ .coverage-pin{padding:88px 24px 16px}
+ .coverage-layout{display:flex;flex-direction:column;align-items:stretch;gap:14px}
+ .coverage-copy{display:grid;grid-template-columns:1fr 1fr;gap:9px 24px;flex:none}
+ .coverage-eyebrow{grid-column:1/-1;grid-row:1}
+ .coverage-title{grid-column:1;grid-row:2;font-size:28px;max-width:none}
+ .coverage-body{grid-column:1;grid-row:3;font-size:11px;line-height:1.4}
+ .coverage-destination{grid-column:2;grid-row:2/4;padding:10px 0}
+ .coverage-current-name{font-size:36px}
+ .coverage-connected{grid-column:1/-1;grid-row:4}
+ .coverage-route-controls .route-map-legend{grid-template-columns:repeat(4,minmax(0,1fr));gap:0 16px}
+ .coverage-route-controls .route-map-legend button{font-size:11px;min-height:27px;padding:5px 0}
+ .coverage-stats-block{grid-column:1/-1;grid-row:5}
+ .coverage-stats dd{font-size:22px}.coverage-stats dt{font-size:8px}
+ .coverage-kicker{grid-column:1/-1;grid-row:6;font-size:11px}
+ .coverage-map-shell{flex:1;min-height:180px;aspect-ratio:auto;max-height:none;padding:12px}
+ .coverage-map-shell .route-label{font-size:22px}
+ .coverage-map-shell .route-hub-label{font-size:18px}
+ .coverage-map-topline{padding-bottom:6px}.coverage-map-caption{padding-top:6px}
+}
+@media(max-height:570px) and (orientation:landscape){.coverage-map-shell{height:100%;aspect-ratio:auto}}
+/* Frame the destination region itself, with no unused eastern gutter. */
+.coverage-map-shell{width:100%;aspect-ratio:850/650;padding:14px;justify-self:stretch}
+.coverage-map-shell .accurate-route-map{width:100%;align-self:stretch;overflow:hidden}
+.coverage-map-shell .shipping-route-svg{display:block;flex:none;width:100%;height:100%;max-width:none}
+@media(max-width:767px),(min-width:768px) and (max-width:1023px) and (orientation:portrait),(max-height:570px) and (orientation:landscape){.coverage-map-shell{aspect-ratio:auto}}
