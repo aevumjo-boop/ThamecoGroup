@@ -3,11 +3,11 @@ function mount(host){
  const footer=host.closest('footer'),logo=footer?.querySelector('.aevum-credit-link'),floor=footer?.querySelector('.site-footer-bottom');
  if(!footer||!logo||!floor)return()=>{};
  const actor=document.createElement('div');actor.className='aevum-mascot-actor';
- const source='./assets/images/aevum-doctor-robot.png';
+ const source='../images/aevum-doctor-robot.png';
  actor.innerHTML='<i class="aevum-mascot-shadow"></i><div class="aevum-walker">'+['body','leg-left','leg-right'].map(part=>`<img class="aevum-doctor aevum-doctor-${part}" src="${source}" alt="" loading="lazy" decoding="async">`).join('')+'</div>';host.append(actor);
  const sprites=[...actor.querySelectorAll('img')],walker=actor.querySelector('.aevum-walker'),reduced=matchMedia('(prefers-reduced-motion: reduce)');
  let animations=[],visible=false,dead=false,playing=false,ready=false,lastPlay=0;
- function geometry(){const f=footer.getBoundingClientRect(),l=logo.getBoundingClientRect(),g=floor.getBoundingClientRect(),h=parseFloat(getComputedStyle(host).getPropertyValue('--mascot-height'))||98;return {h,startX:l.left-f.left+l.width*.45-h/3,endX:Math.min(f.width-h*.67-12,l.right-f.left+10),y:g.bottom-f.top-h-10};}
+ function geometry(){const f=footer.getBoundingClientRect(),l=logo.getBoundingClientRect(),g=floor.getBoundingClientRect(),h=parseFloat(getComputedStyle(host).getPropertyValue('--mascot-height'))||80;return {h,startX:l.left-f.left+l.width*.45-h/3,endX:Math.min(f.width-h*.67-12,l.right-f.left+10),y:g.bottom-f.top-h-10};}
  function stop(){animations.forEach(a=>a.cancel());animations=[];playing=false;host.classList.remove('is-walking');}
  function pose(g){actor.style.transform=`translate(${g.endX}px,${g.y}px)`;actor.style.opacity='1';walker.style.transform='none';}
  async function play(){if(dead||!visible||playing||Date.now()-lastPlay<5000)return;lastPlay=Date.now();playing=true;

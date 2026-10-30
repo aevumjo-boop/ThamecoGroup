@@ -4052,13 +4052,13 @@ header { background: #091b24ed !important; backdrop-filter: blur(18px); }
 /* Cinematic image reveal: no WebGL, no site-wide animated layer. */
 .hero-scrim { --section-fill: #091b24; background: #091b24; overflow: hidden; }
 .cinema-stage { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
-.cinema-photo { position: absolute; inset: -7%; background: url('../assets/images/medical-production.webp') 60% 45% / cover; filter: saturate(.35); opacity: .32; animation: cinema-camera 20s ease-in-out infinite alternate; }
+.cinema-photo { position: absolute; inset: -7%; background: url('../images/medical-production.webp') 60% 45% / cover; filter: saturate(.35); opacity: .32; animation: cinema-camera 20s ease-in-out infinite alternate; }
 .cinema-shade { position: absolute; inset: 0; background: linear-gradient(90deg,#091b24f5 0%,#091b24de 42%,#091b2430 100%), linear-gradient(0deg,#091b24 0%,transparent 45%); }
 .cinema-beam { position: absolute; top: -50%; left: 55%; width: 14%; height: 200%; transform: rotate(24deg) translateX(-170%); background: linear-gradient(90deg,transparent,#c1fbef24,transparent); filter: blur(22px); animation: cinema-light 9s ease-in-out infinite; }
 .cinema-aperture { position: absolute; inset: 0; background: #091b24; transform-origin: right; animation: cinema-open 1.7s cubic-bezier(.7,0,.2,1) both; }
 .cinema-frame-holder { position: relative; width: min(100%,400px) !important; height: 430px !important; perspective: 1200px; }
 .cinema-frame { position: absolute; inset: 0; overflow: hidden; border: 1px solid #c1fbef66; border-radius: 140px 140px 12px 12px; box-shadow: 0 24px 80px #0005; transform: rotateY(-8deg) rotateZ(3deg); animation: cinema-frame-in 1.8s .25s cubic-bezier(.2,.7,.2,1) both, cinema-float 9s 2.1s ease-in-out infinite alternate; }
-.cinema-frame-photo { position: absolute; inset: -5%; background: url('../assets/images/medical-production.webp') 38% 45% / cover; filter: saturate(.45); animation: cinema-camera 16s ease-in-out infinite alternate; }
+.cinema-frame-photo { position: absolute; inset: -5%; background: url('../images/medical-production.webp') 38% 45% / cover; filter: saturate(.45); animation: cinema-camera 16s ease-in-out infinite alternate; }
 .cinema-frame-glass { position: absolute; inset: 0; background: linear-gradient(0deg,#092d38dd,transparent 55%),linear-gradient(110deg,#aefae61a,transparent 55%); }
 .cinema-frame i { position: absolute; left: 20px; bottom: 24px; width: 65px; height: 1px; background: #b6e7dc; }
 .cinema-frame i:last-child { left: auto; right: 20px; width: 25px; }
@@ -4084,9 +4084,9 @@ header { background: #091b24ed !important; backdrop-filter: blur(18px); }
   .cinema-aperture, .cinema-beam { display: none; }
   .cinema-frame { transform: none; }
 }
-[data-testid="page-about"] .cinema-photo { background-image: url('../assets/images/healthcare-team.webp'); }
-[data-testid="page-services"] .cinema-photo { background-image: url('../assets/images/medical-supplies.webp'); }
-[data-testid="page-contact"] .cinema-photo { background-image: url('../assets/images/patient-consultation.webp'); }
+[data-testid="page-about"] .cinema-photo { background-image: url('../images/healthcare-team.webp'); }
+[data-testid="page-services"] .cinema-photo { background-image: url('../images/medical-supplies.webp'); }
+[data-testid="page-contact"] .cinema-photo { background-image: url('../images/patient-consultation.webp'); }
 /* Restore the reference sphere only in the hero and the second section. */
 [data-testid="cymatic-orb"] { display: block !important; background: transparent !important; }
 [data-testid="page-home"] .hero-scrim { background: #091b24; }
