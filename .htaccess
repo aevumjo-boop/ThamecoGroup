@@ -1,0 +1,26 @@
+DirectoryIndex index.html
+
+RewriteEngine On
+
+# Old nested addresses
+RewriteRule ^pages/index/index\.html$ / [R=301,L]
+RewriteRule ^pages/index/?$ / [R=301,L]
+RewriteRule ^pages/about/about\.html$ /about [R=301,L]
+RewriteRule ^pages/services/services\.html$ /services [R=301,L]
+RewriteRule ^pages/contact/contact\.html$ /contact [R=301,L]
+RewriteRule ^pages/(about|services|contact)/?$ /$1 [R=301,L]
+
+# Keep the address bar free of index.html and .html
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+RewriteRule ^index\.html$ / [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+(about|services|contact)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+RewriteRule ^(about|services|contact)/$ /$1 [R=301,L]
+
+# Serve the HTML file while the address stays /about, /services, or /contact
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]

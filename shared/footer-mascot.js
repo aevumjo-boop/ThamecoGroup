@@ -3,7 +3,7 @@ function mount(host){
  const footer=host.closest('footer'),logo=footer?.querySelector('.aevum-credit-link'),floor=footer?.querySelector('.site-footer-bottom');
  if(!footer||!logo||!floor)return()=>{};
  const actor=document.createElement('div');actor.className='aevum-mascot-actor';
- const source='../images/aevum-doctor-robot.png';
+ const source='images/aevum-doctor-robot.png';
  actor.innerHTML='<i class="aevum-mascot-shadow"></i><div class="aevum-walker">'+['body','leg-left','leg-right'].map(part=>`<img class="aevum-doctor aevum-doctor-${part}" src="${source}" alt="" loading="lazy" decoding="async">`).join('')+'</div>';host.append(actor);
  const sprites=[...actor.querySelectorAll('img')],walker=actor.querySelector('.aevum-walker'),reduced=matchMedia('(prefers-reduced-motion: reduce)');
  let animations=[],visible=false,dead=false,playing=false,ready=false,lastPlay=0;
